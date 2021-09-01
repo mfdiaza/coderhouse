@@ -1,0 +1,264 @@
+@mixin main {
+    background: #fff;
+    padding: 20px;
+    flex: 1 1 70%;
+}
+.main {
+    @include main;
+}
+
+.main__article {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #2c3e50;
+    list-style-position: inside;
+}
+
+.main__article__art_span {
+    font-style: italic;
+    margin: 3px;
+}
+
+.main__article__titulo {
+    margin-bottom: 1rem;
+}
+
+.main article:nth-last-child(1){
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.mision {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    background: #fff;
+    padding: 5px;
+    }
+
+.mision p {
+    text-align: justify;
+}
+    
+.mision1 { 
+        grid-area: 1 / 2 / 3 / 4; 
+        text-align: center;
+        transition: 2s;
+}
+
+.mision1:hover {
+    background: #c6c582;
+}
+
+.mision2 {
+         grid-area: 3 / 3 / 5 / 5;
+         text-align: center;
+         transition: 2s;
+}
+
+.mision2:hover {
+    background: #c6c582;
+}
+
+.mision3 {
+         grid-area: 5 / 4 / 7 / 6;
+         text-align: center;
+         transition: 2s;
+}
+
+.mision3:hover {
+    background: #c6c582;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+    padding: 10px;
+    width: 100vh;
+}
+    
+  .div1 { grid-area: 1 / 3 / 2 / 4; }
+  .div2 { grid-area: 1 / 4 / 2 / 5; }
+  .div3 { grid-area: 1 / 2 / 2 / 3; }
+  .div4 { grid-area: 2 / 2 / 3 / 3; }
+  .div5 { grid-area: 2 / 3 / 3 / 4; }
+  .div6 { grid-area: 2 / 4 / 3 / 5; }
+
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.card {
+    width: 300px;
+    background-color: #eee;
+    color: #000;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 4px;
+}
+
+.card__container-img {
+    overflow: hidden;
+    height: 150px;
+}
+
+.card__container-img:hover img {
+    transform: scale(1.3);
+  }
+
+.card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 1s;
+}
+
+.card__container-body {
+    padding: 1rem;
+}
+
+.contact {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    background: #fff;
+    padding: 10px;
+}
+
+.products_flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    align-items: center;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px; 
+    width: 100%;
+    list-style-position: inside;
+    margin-bottom: 2px;
+}
+
+.products_flex ul {
+    margin: 3px;
+}
+
+.software_header { 
+    text-align: center;
+    align-self: center;
+    width: 100%;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(44,62,80,1) 35%);
+    color: #fff;
+}
+
+$soft: ( /*Declaramos nuestro mapa*/
+        2: 35%,
+        3: 33%,
+); 
+/*Creamos el bucle para usar los valores del mapa*/
+@each $software, $width in $soft {
+   .soft#{$software} {
+       width: $width;
+       border-right: solid 1px;
+   }
+}
+
+.soft4 { 
+    width: 30%;
+}
+.hardware_header { 
+    grid-area: 4 / 1 / 5 / 7; 
+    text-align: center;
+    width: 100%;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(44,62,80,1) 35%); 
+    color: #fff;
+    align-self: center;
+}
+
+.hard6 { 
+    width: 50%;
+    border-right: solid 1px; 
+}
+.hard7 { 
+    width: 40%;
+} 
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 16px;
+    margin: 3px;
+    width: 120px;
+  }
+
+@media screen and (max-width: 768px) {
+    .contenedor {
+        flex-direction: column;
+    }
+
+    header {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    header .log {
+        margin: 20px 0;
+    }
+
+    header nav {
+        width: 100%;
+    }
+
+    .flex {
+        flex-direction: column;
+    }
+
+    .mision {
+        grid-template-columns: 1fr;
+    }
+
+    .contact {
+        flex-direction: column;
+    }
+
+    .products_flex {
+        flex-direction: column;
+    }
+
+    .soft2 {
+        width: 100%;
+        border:none;
+    }
+    .soft3 {
+        width: 100%;
+        border:none;
+    }
+    .soft4 {
+        width: 100%;
+        border:none;
+    }
+    .hard6 {
+        width: 100%;
+        border:none;
+    }
+    .hard7 {
+        width: 100%;
+        border:none;
+    }
+}
