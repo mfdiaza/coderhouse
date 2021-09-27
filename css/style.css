@@ -46,8 +46,7 @@ header {
   margin: 3px; }
 
 .main__article__titulo {
-  margin-bottom: 1rem; 
-}
+  margin-bottom: 1rem; }
 
 .main article:nth-last-child(1) {
   margin-bottom: 0;
@@ -63,7 +62,7 @@ header {
   background: #fff;
   padding: 5px; }
 
-.mision p {
+mision p {
   text-align: justify; }
 
 .mision1 {
