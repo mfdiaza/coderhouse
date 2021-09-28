@@ -8,4 +8,3 @@
 Entrega proyecto final para CoderHouse
 HTML + CSS (Bootstrap 5)
 ```
----
